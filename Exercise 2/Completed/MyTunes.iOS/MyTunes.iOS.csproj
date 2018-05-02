@@ -130,16 +130,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -158,9 +158,9 @@
     <Compile Include="MyTunesViewController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MyTunes.Shared\MyTunes.Shared.csproj">
-      <Project>{03B1228D-B101-4139-AB4A-5BB87B8B4C0B}</Project>
-      <Name>MyTunes.Shared</Name>
+    <ProjectReference Include="..\MyTunes.Standard\MyTunes.Standard.csproj">
+      <Project>{540B12BC-D133-4255-930C-A931D7D13A8B}</Project>
+      <Name>MyTunes.Standard</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

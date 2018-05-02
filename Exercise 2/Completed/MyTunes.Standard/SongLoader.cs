@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-
+using System.Linq;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
 
@@ -16,7 +16,9 @@ namespace MyTunes
         {
             using (var reader = new StreamReader(OpenData()))
             {
-                return JsonConvert.DeserializeObject<List<Song>>(await reader.ReadToEndAsync());
+                var songs = JsonConvert.DeserializeObject<List<Song>>(await reader.ReadToEndAsync());
+                foreach (var song in songs) { song.Name = song.Name.RuinSongName(); }
+                return songs;
             }
         }
 
